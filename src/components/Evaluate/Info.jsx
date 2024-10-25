@@ -44,7 +44,7 @@ const Info = ({
 
     return (
         <div className="text-xs sm:text-sm space-y-1 sm:space-y-4">
-            <div className="flex justify-between text-xs sm:text-base">
+            <div className="flex justify-between text-[10px] sm:text-base">
                 <div className="text-center">
                     <p className=''>Holders</p>
                     <div className="flex justify-center gap-1 items-center">
