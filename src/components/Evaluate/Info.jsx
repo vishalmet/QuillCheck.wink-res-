@@ -44,36 +44,36 @@ const Info = ({
 
     return (
         <div className="text-xs sm:text-sm space-y-1 sm:space-y-4">
-            <div className="flex justify-between text-xs sm:text-base">
+            <div className="flex justify-between text-[10px] sm:text-base">
                 <div className="text-center">
                     <p className=''>Holders</p>
                     <div className="flex justify-center gap-1 items-center">
-                        <img className='h-4' src={getRiskIcon(holdersCountRisk)} alt="" />
-                        <p className='font-semibold text-xs'>{holdersCount}</p>
+                        <img className='h-3 sm:h-4' src={getRiskIcon(holdersCountRisk)} alt="" />
+                        <p className='font-semibold text-[10px] sm:text-md'>{holdersCount}</p>
                     </div>
                 </div>
                 <div className="border-l-2 border-white/10 mx-1 sm:mx-3 self-stretch"></div>
                 <div>
                     <p>Current Liquidity</p>
                     <div className="flex justify-center gap-1 items-center">
-                        <img className='h-4' src={getRiskIcon(currentLiquidityRisk)} alt="" />
-                        <p className='font-semibold text-xs'>${currentLiquidity}</p>
+                        <img className='h-3 sm:h-4' src={getRiskIcon(currentLiquidityRisk)} alt="" />
+                        <p className='font-semibold text-[10px] sm:text-md'>${currentLiquidity}</p>
                     </div>
                 </div>
                 <div className="border-l-2 border-white/10 mx-1 sm:mx-3 self-stretch"></div>
                 <div>
                     <p>LP Holders</p>
                     <div className="flex justify-center gap-1 items-center">
-                        <img className='h-4' src={getRiskIcon(lpHoldersRisk)} alt="" />
-                        <p className='font-semibold text-md'>{lpHolders}</p>
+                        <img className='h-3 sm:h-4' src={getRiskIcon(lpHoldersRisk)} alt="" />
+                        <p className='font-semibold text-[10px] sm:text-md'>{lpHolders}</p>
                     </div>
                 </div>
                 <div className="border-l-2 border-white/10 mx-1 sm:mx-3 self-stretch"></div>
                 <div>
                     <p>Trading Pairs</p>
                     <div className="flex justify-center gap-1 items-center">
-                        <img className='h-4' src={getRiskIcon(pairsRisk)} alt="" />
-                        <p className='font-semibold text-xs sm:text-md'>{pairs}</p>
+                        <img className='h-3 sm:h-4' src={getRiskIcon(pairsRisk)} alt="" />
+                        <p className='font-semibold text-[10px] sm:text-md'>{pairs}</p>
                     </div>
                 </div>
             </div>
@@ -82,24 +82,24 @@ const Info = ({
                 <div>
                     <p>Buy Tax</p>
                     <div className="flex justify-center gap-1 items-center">
-                        <img className='h-4' src={getRiskIcon(buyTaxRisk)} alt="" />
-                        <p className='font-semibold text-xs sm:text-md'>{buyTax}%</p>
+                        <img className='h-3 sm:h-4' src={getRiskIcon(buyTaxRisk)} alt="" />
+                        <p className='font-semibold text-[10px] sm:text-md'>{buyTax}%</p>
                     </div>
                 </div>
                 <div className="border-l-2 border-white/10 mx-10 self-stretch"></div>
                 <div>
                     <p>Sell Tax</p>
                     <div className="flex justify-center gap-1 items-center">
-                        <img className='h-4' src={getRiskIcon(sellTaxRisk)} alt="" />
-                        <p className='font-semibold text-xs sm:text-md'>{sellTax}%</p>
+                        <img className='h-3 sm:h-4' src={getRiskIcon(sellTaxRisk)} alt="" />
+                        <p className='font-semibold text-[10px] sm:text-md'>{sellTax}%</p>
                     </div>
                 </div>
                 <div className="border-l-2 border-white/10 mx-10 self-stretch"></div>
                 <div>
                     <p>Transfer Tax</p>
                     <div className="flex justify-center gap-1 items-center">
-                        <img className='h-4' src={getRiskIcon(transferTaxRisk)} alt="" />
-                        <p className='font-semibold text-xs sm:text-md'>{transferTax}%</p>
+                        <img className='h-3 sm:h-4' src={getRiskIcon(transferTaxRisk)} alt="" />
+                        <p className='font-semibold text-[10px] sm:text-md'>{transferTax}%</p>
                     </div>
                 </div>
             </div>
