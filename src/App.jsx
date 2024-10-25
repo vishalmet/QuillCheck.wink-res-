@@ -45,7 +45,7 @@ const App = () => {
     <div className="min-h-screen bg-cover bg-center bricolage-font bg-custom-bg jost flex justify-center items-center">
       <div className="p-3 space-y-5">
         <img
-          className="w-[200px] h-[40px] mx-auto"
+          className="w-[150px] sm:w-[200px] h-[25px] sm:h-[40px] mx-auto"
           src={Assets.QuillCheckLogo}
           alt="Quill Check Logo"
         />

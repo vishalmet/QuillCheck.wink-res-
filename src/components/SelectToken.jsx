@@ -44,16 +44,16 @@ const SelectToken = ({ onCheckClick, setSelectedToken, setTokenAddress, setChain
 
   return (
     <div
-      className="bg-[#18162099]/60 rounded-[10px] backdrop-filter backdrop-blur-sm w-[200px] sm:w-[460px] mx-auto p-[30px] jost"
+      className="bg-[#18162099]/60 rounded-[10px] backdrop-filter backdrop-blur-sm w-[250px] sm:w-[460px] mx-auto p-[30px] jost"
       style={{ boxShadow: '4px 4px 12px rgba(0, 0, 0, 0.5)' }}
     >
-      <p className="text-white text-[30px] text-center">Evaluate Any Token</p>
+      <p className="text-white text-[18px] sm:text-[30px] text-center">Evaluate Any Token</p>
       <div className="mt-4 space-y-4">
         <div className="flex justify-center space-x-3">
           {['ETH', 'BSC', 'POL', 'Base', 'SOL'].map((token, index) => (
             <button
               key={token}
-              className={` p-2 rounded-md flex justify-center items-center text-sm gap-1 w-[72px] h-[36px] ${
+              className={` p-2 rounded-md flex justify-center items-center text-sm gap-0 sm:gap-1 w-fit sm:w-[72px] h-[36px] ${
                 selectedButton === index + 1
                   ? 'text-white  font-normal'
                   : 'border border-white  text-white opacity-60 font-light'
@@ -75,7 +75,7 @@ const SelectToken = ({ onCheckClick, setSelectedToken, setTokenAddress, setChain
                     : 'transparent') // Reset color on hover leave
               }
             >
-              <img className="h-4" src={Assets[token]} alt={token} /><span className=' flex sm:hidden'></span>
+              <img className="h-4 w-auto" src={Assets[token]} alt={token} /><span className=' flex sm:hidden'></span>
             </button>
           ))}
         </div>
