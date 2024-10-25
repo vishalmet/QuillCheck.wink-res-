@@ -75,7 +75,7 @@ const SelectToken = ({ onCheckClick, setSelectedToken, setTokenAddress, setChain
                     : 'transparent') // Reset color on hover leave
               }
             >
-              <img className="h-4 w-auto" src={Assets[token]} alt={token} /><span className='sm:block hidden'>{token}</span>
+              <img className="h-4 w-auto" src={Assets[token]} alt={token} /><span className='sm:hidden flex'>{token}</span>
             </button>
           ))}
         </div>
