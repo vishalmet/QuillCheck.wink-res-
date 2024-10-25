@@ -107,8 +107,8 @@ const App = () => {
           )}
         </AnimatePresence>
         <div className="space-y-1">
-          <div className="flex justify-center text-white text-lg font-light">
-            <img className="h-5" src={Assets.QuillAI} alt="QuillAI" />
+          <div className="flex justify-center text-white text-xs sm:text-lg font-light">
+            <img className=" h-3 w-auto sm:h-5" src={Assets.QuillAI} alt="QuillAI" />
           </div>
           <div className="flex justify-center items-center text-white">
             Powered by Winks.fun

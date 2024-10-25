@@ -182,13 +182,13 @@ const tokenImage =  tokenImages[selectedToken]
     style={{ boxShadow: '4px 4px 12px rgba(0, 0, 0, 0.5)' }}
   > */}
     <div
-      className="bg-[#18162099]/60 rounded-[10px] backdrop-filter h-full backdrop-blur-sm w-[460px] mx-3 jost text-white"
+      className="bg-[#18162099]/60 rounded-[10px] backdrop-filter h-full backdrop-blur-sm w-[250px] sm:w-[460px] mx-3 jost text-white"
       style={{ boxShadow: '4px 4px 12px rgba(0, 0, 0, 0.5)' }}
     >
       {
-        !ercerror && <> <div className="bg-[#181B2E] rounded-t-[10px] p-[15px] px-[20px]">
+        !ercerror && <> <div className="bg-[#181B2E] rounded-t-[10px] p-[5px] sm:p-[15px] px-[8px] sm:px-[20px]">
           <div className="flex justify-between items-center">
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-1 sm:gap-2">
               {/* Skeleton for Avatar and Token Name */}
               {loading ? (
                 <>
@@ -199,11 +199,11 @@ const tokenImage =  tokenImages[selectedToken]
               ) : (
                 <>
                 {selectedToken && (
-                  <img className='h-5' src={valueFetch?.tokenInformation?.generalInformation?.tokenImageLink || tokenImages[selectedToken] || Polygon} alt="Avatar" />
+                  <img className=' h-3 sm:h-5' src={valueFetch?.tokenInformation?.generalInformation?.tokenImageLink || tokenImages[selectedToken] || Polygon} alt="Avatar" />
                 )}
-                <div className=" flex gap-2 items-baseline">
-                  <p className="text-xl text-center max-w-44 truncate">{valueFetch?.tokenInformation?.generalInformation?.tokenName || 'Token Name'}</p>
-                  <p className='text-xs font-light'>({valueFetch?.tokenInformation?.generalInformation.tokenSymbol || 'Symbol'})</p>
+                <div className=" flex gap-1 sm:gap-2 items-baseline">
+                  <p className="text-sm sm:text-xl text-center max-w-16 sm:max-w-44 truncate">{valueFetch?.tokenInformation?.generalInformation?.tokenName || 'Token Name'}</p>
+                  <p className='text-[8px] sm:text-xs font-light'>({valueFetch?.tokenInformation?.generalInformation.tokenSymbol || 'Symbol'})</p>
                   </div>
                 </>
               )}
@@ -244,7 +244,7 @@ const tokenImage =  tokenImages[selectedToken]
           </p>
         </div>
 
-          <div className="px-[20px] pt-[20px] pb-[10px]">
+          <div className="px-[8px] sm:px-[20px] pt-[8px] sm:pt-[20px] pb-[4px] sm:pb-[10px]">
             <div className="flex items-center justify-between h-full">
               {/* Status and Report */}
               {loading ? (
@@ -294,9 +294,9 @@ const tokenImage =  tokenImages[selectedToken]
       }
 
       {
-        ercerror && <div className='m-5 flex flex-col justify-center items-center py-3 pt-4'>  <p className=' text-3xl  flex lg:gap-4  '> <img src={
-          "https://check.quillai.network/icons/X.svg"} className='w-7 ' alt='x' /> ERC-20 contract not be found at the given address </p> <br />
-          <div className='flex justify-center items-center lg:px-5 ' >
+        ercerror && <div className='m-1 sm:m-5 flex flex-col justify-center items-center py-1 sm:py-3 pt-1 sm:pt-4'>  <p className=' text-xl sm:text-3xl  flex gap-2 sm:gap-4  '> <img src={
+          "https://check.quillai.network/icons/X.svg"} className='w-3 sm:w-7 ' alt='x' /> ERC-20 contract not be found at the given address </p> <br />
+          <div className='flex justify-center items-center px-2 sm:px-5 ' >
             Please confirm the contract is ERC-20 and on the correct chain.
 
 
