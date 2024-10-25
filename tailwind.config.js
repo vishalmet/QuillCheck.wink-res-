@@ -12,6 +12,9 @@ export default {
       borderColor: {
         'custom-gradient': 'linear-gradient(90deg, #3790FF, #86AFFF, #0067A1)',
       },
+      screens: {
+        sm: "450px", // Custom small screen starting from 450px
+      },
     },
   },
   plugins: [],
