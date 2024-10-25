@@ -44,12 +44,12 @@ const SelectToken = ({ onCheckClick, setSelectedToken, setTokenAddress, setChain
 
   return (
     <div
-      className="bg-[#18162099]/60 rounded-[10px] backdrop-filter backdrop-blur-sm w-[250px] sm:w-[460px] mx-auto p-[15px] sm:p-[30px] jost"
+      className="bg-[#18162099]/60 rounded-[10px] backdrop-filter backdrop-blur-sm w-[250px] sm:w-[460px] mx-auto p-[10px] sm:p-[30px] jost"
       style={{ boxShadow: '4px 4px 12px rgba(0, 0, 0, 0.5)' }}
     >
       <p className="text-white text-[18px] sm:text-[30px] text-center">Evaluate Any Token</p>
-      <div className="mt-4 space-y-4">
-        <div className="flex justify-center space-x-3">
+      <div className="mt-2 sm:mt-4 space-y-2 sm:space-y-4">
+        <div className="flex justify-center space-x-1 sm:space-x-3">
           {['ETH', 'BSC', 'POL', 'Base', 'SOL'].map((token, index) => (
             <button
               key={token}
@@ -99,7 +99,7 @@ const SelectToken = ({ onCheckClick, setSelectedToken, setTokenAddress, setChain
         <div className="flex justify-end rounded-[20px] ">
           <button
             onClick={onCheckClick}
-            className="bg-[#007AFF] hover:bg-[#007AFF]/70 rounded-[5px] text-white p-2 text-sm sm:text-lg w-[90px] sm:w-[120px] ml-auto border-y border-y-[#86AFFF]"
+            className="bg-[#007AFF] hover:bg-[#007AFF]/70 rounded-[5px] text-white p-1 sm:p-2 text-sm sm:text-lg w-[80px] sm:w-[120px] ml-auto border-y border-y-[#86AFFF]"
           >
             Check
           </button>
