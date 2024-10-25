@@ -30,7 +30,7 @@ const Status = ({ totalScore, tokenAge, honeypotStatus, owner }) => {
   return (
     <div>
       <div className="flex gap-1 sm:gap-4 text-xs sm:text-sm">
-        <div className="space-y-3">
+        <div className="space-y-1 sm:space-y-3">
           <div className="">
             <p className='text-[#DDDDDD] text-xs sm:text-base'>Last Known Status:</p>
             <div

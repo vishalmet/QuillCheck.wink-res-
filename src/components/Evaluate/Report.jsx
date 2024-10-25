@@ -4,7 +4,7 @@ import Assets from '../Assets';
 const Report = ({ critical, risky, medium, neutral }) => {
     return (
         <div>
-            <div className="space-y-2 text-xs sm:text-sm">
+            <div className="space-y-1 sm:space-y-2 text-xs sm:text-sm">
                 <div className="flex justify-between space-x-3 sm:space-x-9 items-center">
                     <div className="flex items-center gap-1 sm:gap-2">
                         <img className='h-4' src={Assets.XVoilet} alt="" />

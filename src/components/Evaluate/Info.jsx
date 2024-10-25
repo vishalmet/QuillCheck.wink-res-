@@ -43,10 +43,10 @@ const Info = ({
 }) => {
 
     return (
-        <div className="text-sm space-y-4">
-            <div className="flex justify-between">
+        <div className="text-xs sm:text-sm space-y-1 sm:space-y-4">
+            <div className="flex justify-between text-xs sm:text-base">
                 <div className="text-center">
-                    <p>Holders</p>
+                    <p className=''>Holders</p>
                     <div className="flex justify-center gap-1 items-center">
                         <img className='h-4' src={getRiskIcon(holdersCountRisk)} alt="" />
                         <p className='font-semibold text-xs'>{holdersCount}</p>
@@ -73,7 +73,7 @@ const Info = ({
                     <p>Trading Pairs</p>
                     <div className="flex justify-center gap-1 items-center">
                         <img className='h-4' src={getRiskIcon(pairsRisk)} alt="" />
-                        <p className='font-semibold text-md'>{pairs}</p>
+                        <p className='font-semibold text-xs sm:text-md'>{pairs}</p>
                     </div>
                 </div>
             </div>
@@ -83,7 +83,7 @@ const Info = ({
                     <p>Buy Tax</p>
                     <div className="flex justify-center gap-1 items-center">
                         <img className='h-4' src={getRiskIcon(buyTaxRisk)} alt="" />
-                        <p className='font-semibold text-md'>{buyTax}%</p>
+                        <p className='font-semibold text-xs sm:text-md'>{buyTax}%</p>
                     </div>
                 </div>
                 <div className="border-l-2 border-white/10 mx-10 self-stretch"></div>
@@ -91,7 +91,7 @@ const Info = ({
                     <p>Sell Tax</p>
                     <div className="flex justify-center gap-1 items-center">
                         <img className='h-4' src={getRiskIcon(sellTaxRisk)} alt="" />
-                        <p className='font-semibold text-md'>{sellTax}%</p>
+                        <p className='font-semibold text-xs sm:text-md'>{sellTax}%</p>
                     </div>
                 </div>
                 <div className="border-l-2 border-white/10 mx-10 self-stretch"></div>
@@ -99,7 +99,7 @@ const Info = ({
                     <p>Transfer Tax</p>
                     <div className="flex justify-center gap-1 items-center">
                         <img className='h-4' src={getRiskIcon(transferTaxRisk)} alt="" />
-                        <p className='font-semibold text-md'>{transferTax}%</p>
+                        <p className='font-semibold text-xs sm:text-md'>{transferTax}%</p>
                     </div>
                 </div>
             </div>
