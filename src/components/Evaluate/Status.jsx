@@ -38,7 +38,7 @@ const Status = ({ totalScore, tokenAge, honeypotStatus, owner }) => {
               style={{ backgroundColor: honeypotBgColor }} // Set honeypot background color
             >
               <img className='h-4 sm:h-6' src={honeypotIcon} alt="" /> {/* Set honeypot asset */}
-              <p>{honeypotStatus}</p>
+              <p className=' hidden sm:flex'>{honeypotStatus}</p>
             </div>
           </div>
           <div className="w-fit">
