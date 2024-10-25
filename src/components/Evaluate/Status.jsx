@@ -29,10 +29,10 @@ const Status = ({ totalScore, tokenAge, honeypotStatus, owner }) => {
 
   return (
     <div>
-      <div className="flex sm:gap-1 gap-4 text-xs sm:text-sm">
+      <div className="flex gap-1 sm:gap-4 text-xs sm:text-sm">
         <div className="space-y-3">
           <div className="">
-            <p className='text-[#DDDDDD] text-[8px] sm:text-base'>Last Known Status:</p>
+            <p className='text-[#DDDDDD] text-xs sm:text-base'>Last Known Status:</p>
             <div
               className="h-6 sm:h-10 w-fit rounded-[8px] p-[6px] sm:p-[10px] flex items-center gap-1 sm:gap-2"
               style={{ backgroundColor: honeypotBgColor }} // Set honeypot background color
