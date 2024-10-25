@@ -44,7 +44,7 @@ const SelectToken = ({ onCheckClick, setSelectedToken, setTokenAddress, setChain
 
   return (
     <div
-      className="bg-[#18162099]/60 rounded-[10px] backdrop-filter backdrop-blur-sm w-[250px] sm:w-[460px] mx-auto p-[30px] jost"
+      className="bg-[#18162099]/60 rounded-[10px] backdrop-filter backdrop-blur-sm w-[250px] sm:w-[460px] mx-auto p-[15px] sm:p-[30px] jost"
       style={{ boxShadow: '4px 4px 12px rgba(0, 0, 0, 0.5)' }}
     >
       <p className="text-white text-[18px] sm:text-[30px] text-center">Evaluate Any Token</p>
@@ -53,7 +53,7 @@ const SelectToken = ({ onCheckClick, setSelectedToken, setTokenAddress, setChain
           {['ETH', 'BSC', 'POL', 'Base', 'SOL'].map((token, index) => (
             <button
               key={token}
-              className={` p-2 rounded-md flex justify-center items-center text-sm gap-0 sm:gap-1 w-fit sm:w-[72px] h-[36px] ${
+              className={` p-2 rounded-md flex justify-center items-center text-sm gap-0 sm:gap-1 w-[50px] sm:w-[72px] h-[36px] ${
                 selectedButton === index + 1
                   ? 'text-white  font-normal'
                   : 'border border-white  text-white opacity-60 font-light'
@@ -83,7 +83,7 @@ const SelectToken = ({ onCheckClick, setSelectedToken, setTokenAddress, setChain
           type="text"
           value={inputValue}
           onChange={handleInputChange}
-          className="bg-white w-full h-12 rounded-[5px] text-black p-4"
+          className="bg-white w-full h-8 sm:h-12 rounded-[5px] text-black p-2 sm:p-4"
           placeholder="Enter token address"
         />
         {empty && (
@@ -99,7 +99,7 @@ const SelectToken = ({ onCheckClick, setSelectedToken, setTokenAddress, setChain
         <div className="flex justify-end rounded-[20px] ">
           <button
             onClick={onCheckClick}
-            className="bg-[#007AFF] hover:bg-[#007AFF]/70 rounded-[5px] text-white p-2 text-lg w-[120px] ml-auto border-y border-y-[#86AFFF]"
+            className="bg-[#007AFF] hover:bg-[#007AFF]/70 rounded-[5px] text-white p-2 text-sm sm:text-lg w-[90px] sm:w-[120px] ml-auto border-y border-y-[#86AFFF]"
           >
             Check
           </button>
