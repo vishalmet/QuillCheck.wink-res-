@@ -215,7 +215,7 @@ const tokenImage =  tokenImages[selectedToken]
               ) : (
 
                 <div className='border p-1 rounded'>
-                  <img onClick={onBackClick} src={"https://cdn.iconscout.com/icon/premium/png-256-thumb/back-arrow-9601866-8212676.png?f=webp&w=256"} className='w-5 h-5' alt="" />
+                  <img onClick={onBackClick} src={"https://cdn.iconscout.com/icon/premium/png-256-thumb/back-arrow-9601866-8212676.png?f=webp&w=256"} className='w-3 sm:w-5 h-3 sm:h-5' alt="" />
                 </div>
               )}
             </div>
@@ -228,7 +228,7 @@ const tokenImage =  tokenImages[selectedToken]
             ) : (
               selectedToken && (
                 <span
-                  className="mr-2 p-1 px-2 rounded-[5px] text-sm flex gap-1 items-center"
+                  className="mr-2 p-1 px-2 rounded-[5px] text-xs sm:text-sm flex gap-1 w-fit sm:w-full items-center"
                   style={{ backgroundColor: buttonColors[selectedToken] || '#000000' }}  // Fallback to black if no token selected
                 >
                   {tokenImages[selectedToken] && (
@@ -238,7 +238,7 @@ const tokenImage =  tokenImages[selectedToken]
                 </span>
               )
             )}
-            <span className='overflow-scroll lg:overflow-visible scrollbar-hide '>
+            <span className='overflow-scroll lg:overflow-visible scrollbar-hide w-40 sm:w-full '>
           {loading ? <Skeleton width={200} /> : ( tokenAddress || 'Enter Token Address')}
         </span>
           </p>
