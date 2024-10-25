@@ -44,7 +44,7 @@ const SelectToken = ({ onCheckClick, setSelectedToken, setTokenAddress, setChain
 
   return (
     <div
-      className="bg-[#18162099]/60 rounded-[10px] backdrop-filter backdrop-blur-sm  w-[460px] sm:w-[200px] mx-auto p-[10px] sm:p-[30px] jost"
+      className="bg-[#18162099]/60 rounded-[10px] backdrop-filter backdrop-blur-sm  w-[460px] sm:w-fit mx-auto p-[10px] sm:p-[30px] jost"
       style={{ boxShadow: '4px 4px 12px rgba(0, 0, 0, 0.5)' }}
     >
       <p className="text-white text-[18px] sm:text-[30px] text-center">Evaluate Any Token</p>
@@ -83,7 +83,7 @@ const SelectToken = ({ onCheckClick, setSelectedToken, setTokenAddress, setChain
           type="text"
           value={inputValue}
           onChange={handleInputChange}
-          className="bg-white w-full h-8 text-xs sm:text-base sm:h-12 rounded-[5px] text-black p-2 sm:p-4"
+          className="bg-white w-[400px] sm:w-full h-8 text-xs sm:text-base sm:h-12 rounded-[5px] text-black p-2 sm:p-4"
           placeholder="Enter token address"
         />
         {empty && (
