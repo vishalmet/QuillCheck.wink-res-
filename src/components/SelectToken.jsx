@@ -44,7 +44,7 @@ const SelectToken = ({ onCheckClick, setSelectedToken, setTokenAddress, setChain
 
   return (
     <div
-      className="bg-[#18162099]/60 rounded-[10px] backdrop-filter backdrop-blur-sm  sm:w-[460px] w-fit mx-auto p-[10px] sm:p-[30px] jost"
+      className="bg-[#18162099]/60 rounded-[10px] backdrop-filter backdrop-blur-sm  sm:w-[460px] w-[200px] mx-auto p-[10px] sm:p-[30px] jost"
       style={{ boxShadow: '4px 4px 12px rgba(0, 0, 0, 0.5)' }}
     >
       <p className="text-white text-[18px] sm:text-[30px] text-center">Evaluate Any Token</p>
@@ -75,7 +75,7 @@ const SelectToken = ({ onCheckClick, setSelectedToken, setTokenAddress, setChain
                     : 'transparent') // Reset color on hover leave
               }
             >
-              <img className="h-4 w-auto" src={Assets[token]} alt={token} /><span className='sm:hidden flex'>{token}</span>
+              <img className="h-4 w-auto" src={Assets[token]} alt={token} /><span className='flex'>{token}</span>
             </button>
           ))}
         </div>
