@@ -29,27 +29,27 @@ const Status = ({ totalScore, tokenAge, honeypotStatus, owner }) => {
 
   return (
     <div>
-      <div className="flex gap-4 text-sm">
+      <div className="flex gap-1 sm:gap-4 text-xs sm:text-sm">
         <div className="space-y-3">
           <div className="">
-            <p className='text-[#DDDDDD]'>Last Known Status:</p>
+            <p className='text-[#DDDDDD] text-xs sm:text-base'>Last Known Status:</p>
             <div
-              className="h-10 w-fit rounded-[8px] p-[10px] flex items-center gap-2"
+              className="h-6 sm:h-10 w-fit rounded-[8px] p-[6px] sm:p-[10px] flex items-center gap-1 sm:gap-2"
               style={{ backgroundColor: honeypotBgColor }} // Set honeypot background color
             >
-              <img className='h-6' src={honeypotIcon} alt="" /> {/* Set honeypot asset */}
+              <img className='h-4 sm:h-6' src={honeypotIcon} alt="" /> {/* Set honeypot asset */}
               <p>{honeypotStatus}</p>
             </div>
           </div>
           <div className="w-fit">
-            <p className='text-[#DDDDDD]'>Token Age:</p>
-            <p className='text-center'>{tokenAge} </p>
+            <p className='text-[#DDDDDD] text-xs sm:text-base'>Token Age:</p>
+            <p className='text-center text-xs sm:text-base'>{tokenAge} </p>
           </div>
         </div>
 
         <div className="space-y-3">
           <div className="w-fit">
-            <p className='text-[#DDDDDD]'>Overall Score:</p>
+            <p className='text-[#DDDDDD] text-xs sm:text-base'>Overall Score:</p>
             {/* <div
               className="h-10 w-full rounded-[8px] flex justify-center items-center mx-auto"
               style={{ backgroundColor: getBackgroundColor(totalScore) }} // Set background color dynamically
@@ -57,28 +57,28 @@ const Status = ({ totalScore, tokenAge, honeypotStatus, owner }) => {
               <p className='text-base font-semibold'>{totalScore}%</p>
             </div> */}
             <p
-              className="h-10 w-full rounded-[8px] flex justify-center items-center mx-auto"
+              className="h-6 sm:h-10 w-full rounded-[8px] flex justify-center items-center mx-auto"
               style={{ backgroundColor: getBackgroundColor(totalScore) }} // Set background color dynamically
             >
               <span className="flex items-baseline">
-                <span className="text-xl font-semibold">
+                <span className=" text-base sm:text-xl font-semibold">
                   {Math.floor(Number(totalScore) || 0)}{/* Integer part */}
                 </span>
-                <span className="text-sm font-medium">
+                <span className="text-xs sm:text-sm font-medium">
                   .{(Number(totalScore) || 0).toFixed(2).split('.')[1]}{/* Decimal part */}
                 </span>
-                <span className="text-sm font-medium">%</span> {/* Percent symbol */}
+                <span className="text-xs sm:text-sm font-medium">%</span> {/* Percent symbol */}
               </span>
             </p>
           </div>
           <div className="w-fit cursor-pointer" onClick={handleCopy}>
-            <p className='text-[#DDDDDD]'>Ownership:</p>
+            <p className='text-[#DDDDDD] text-xs sm:text-base'>Ownership:</p>
             {owner !== '' && owner !== 'Renounced' ? (
               <>
                 {owner.slice(0, 4)}...{owner.slice(-4)}
               </>
             ) : (
-              <>{owner === 'Renounced' ? owner : <img className='h-3 lg:h-4 mx-auto' src={Assets.X} alt="X" />}</>
+              <>{owner === 'Renounced' ? owner : <img className='h-3 sm:h-4 mx-auto' src={Assets.X} alt="X" />}</>
             )}
 
           </div>

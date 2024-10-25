@@ -182,7 +182,7 @@ const tokenImage =  tokenImages[selectedToken]
     style={{ boxShadow: '4px 4px 12px rgba(0, 0, 0, 0.5)' }}
   > */}
     <div
-      className="bg-[#18162099]/60 rounded-[10px] backdrop-filter h-full backdrop-blur-sm w-[250px] sm:w-[460px] mx-3 jost text-white"
+      className="bg-[#18162099]/60 rounded-[10px] backdrop-filter h-full backdrop-blur-sm sm:w-[460px] w-[250px] mx-3 jost text-white"
       style={{ boxShadow: '4px 4px 12px rgba(0, 0, 0, 0.5)' }}
     >
       {
@@ -296,7 +296,7 @@ const tokenImage =  tokenImages[selectedToken]
       {
         ercerror && <div className='m-1 sm:m-5 flex flex-col justify-center items-center py-1 sm:py-3 pt-1 sm:pt-4'>  <p className=' text-sm sm:text-3xl  flex gap-2 sm:gap-4  '> <img src={
           "https://check.quillai.network/icons/X.svg"} className='w-5 sm:w-7 ' alt='x' /> ERC-20 contract not be found at the given address </p> <br />
-          <div className='flex justify-center text-xs text-base items-center px-2 sm:px-5 ' >
+          <div className='flex justify-center text-xs sm:text-base items-center px-2 sm:px-5 ' >
             Please confirm the contract is ERC-20 and on the correct chain.
 
 
