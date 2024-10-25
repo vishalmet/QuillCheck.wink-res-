@@ -228,7 +228,7 @@ const tokenImage =  tokenImages[selectedToken]
             ) : (
               selectedToken && (
                 <span
-                  className="mr-2 p-1 px-2 rounded-[5px] text-xs sm:text-sm flex gap-1 w-fit sm:w-full items-center"
+                  className="mr-2 p-1 px-2 rounded-[5px] text-xs sm:text-sm flex gap-1 w-fit items-center"
                   style={{ backgroundColor: buttonColors[selectedToken] || '#000000' }}  // Fallback to black if no token selected
                 >
                   {tokenImages[selectedToken] && (
