@@ -83,7 +83,7 @@ const SelectToken = ({ onCheckClick, setSelectedToken, setTokenAddress, setChain
           type="text"
           value={inputValue}
           onChange={handleInputChange}
-          className="bg-white w-full h-8 sm:h-12 rounded-[5px] text-black p-2 sm:p-4"
+          className="bg-white w-full h-10 text-sm sm:text-base sm:h-12 rounded-[5px] text-black p-2 sm:p-4"
           placeholder="Enter token address"
         />
         {empty && (
