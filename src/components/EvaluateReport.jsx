@@ -238,7 +238,7 @@ const tokenImage =  tokenImages[selectedToken]
                 </span>
               )
             )}
-            <span className='overflow-scroll lg:overflow-visible scrollbar-hide w-40 sm:w-full '>
+            <span className='overflow-scroll lg:overflow-visible scrollbar-hide w-32 truncate sm:w-full '>
           {loading ? <Skeleton width={200} /> : ( tokenAddress || 'Enter Token Address')}
         </span>
           </p>
