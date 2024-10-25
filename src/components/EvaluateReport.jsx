@@ -223,12 +223,12 @@ const tokenImage =  tokenImages[selectedToken]
 
           {/* Token Address */}
           <p className='text-xs text-white flex items-center'>
-            {loading ? (
+          {loading ? (
               <Skeleton width={250} />
             ) : (
               selectedToken && (
                 <span
-                  className="mr-2 p-1 px-2 rounded-[5px] text-xs sm:text-sm flex gap-1 w-fit items-center"
+                  className="mr-2 p-1 px-2 rounded-[5px] text-xs sm:text-sm flex gap-1 items-center"
                   style={{ backgroundColor: buttonColors[selectedToken] || '#000000' }}  // Fallback to black if no token selected
                 >
                   {tokenImages[selectedToken] && (
