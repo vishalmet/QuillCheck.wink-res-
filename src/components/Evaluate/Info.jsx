@@ -52,7 +52,7 @@ const Info = ({
                         <p className='font-semibold text-xs'>{holdersCount}</p>
                     </div>
                 </div>
-                <div className="border-l-2 border-white/10 mx-3 self-stretch"></div>
+                <div className="border-l-2 border-white/10 mx-1 sm:mx-3 self-stretch"></div>
                 <div>
                     <p>Current Liquidity</p>
                     <div className="flex justify-center gap-1 items-center">
@@ -60,7 +60,7 @@ const Info = ({
                         <p className='font-semibold text-xs'>${currentLiquidity}</p>
                     </div>
                 </div>
-                <div className="border-l-2 border-white/10 mx-3 self-stretch"></div>
+                <div className="border-l-2 border-white/10 mx-1 sm:mx-3 self-stretch"></div>
                 <div>
                     <p>LP Holders</p>
                     <div className="flex justify-center gap-1 items-center">
@@ -68,7 +68,7 @@ const Info = ({
                         <p className='font-semibold text-md'>{lpHolders}</p>
                     </div>
                 </div>
-                <div className="border-l-2 border-white/10 mx-3 self-stretch"></div>
+                <div className="border-l-2 border-white/10 mx-1 sm:mx-3 self-stretch"></div>
                 <div>
                     <p>Trading Pairs</p>
                     <div className="flex justify-center gap-1 items-center">
