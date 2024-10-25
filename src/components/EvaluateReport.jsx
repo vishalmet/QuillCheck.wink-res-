@@ -294,7 +294,7 @@ const tokenImage =  tokenImages[selectedToken]
       }
 
       {
-        ercerror && <div className='m-1 sm:m-5 flex flex-col justify-center items-center py-1 sm:py-3 pt-1 sm:pt-4'>  <p className=' sm:text-xl text-3xl  flex gap-2 sm:gap-4  '> <img src={
+        ercerror && <div className='m-1 sm:m-5 flex flex-col justify-center items-center py-1 sm:py-3 pt-1 sm:pt-4'>  <p className=' text-xl sm:text-3xl  flex gap-2 sm:gap-4  '> <img src={
           "https://check.quillai.network/icons/X.svg"} className='w-3 sm:w-7 ' alt='x' /> ERC-20 contract not be found at the given address </p> <br />
           <div className='flex justify-center items-center px-2 sm:px-5 ' >
             Please confirm the contract is ERC-20 and on the correct chain.
