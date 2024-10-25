@@ -1,9 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Assets from './components/Assets';
 import SelectToken from './components/SelectToken';
+import SelectTokenMobile from './components/SelectTokenMobile'; // Import the mobile component
 import EvaluateReport from './components/EvaluateReport';
 import EvaluateSol from './components/EvaluateSol'; // Import EvaluateSol component
 import { motion, AnimatePresence } from 'framer-motion';
+
+// Hook to determine if the device is mobile
+const useIsMobile = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  return isMobile;
+};
 
 const App = () => {
   const [showReport, setShowReport] = useState(false); // Toggle between SelectToken and EvaluateReport/EvaluateSol
@@ -13,13 +27,14 @@ const App = () => {
   const [empty, setEmpty] = useState(false);
   const [buttonclick, setButtonclick] = useState(false);
 
+  const isMobile = useIsMobile(); // Check if the device is mobile
+
   const handleCheckClick = () => {
     // Check if the selected token is SOL and validate the address length
     if (selectedToken === 'SOL' && (tokenAddress.length < 43 || tokenAddress.length > 47)) {
       setEmpty(true);
       return;
     }
-    
 
     // Check the token address length for other tokens
     if (selectedToken !== 'SOL' && tokenAddress.length !== 42) {
@@ -35,7 +50,6 @@ const App = () => {
 
     setShowReport(true); // Show EvaluateReport or EvaluateSol when Check is clicked
   };
-
 
   const handleBackClick = () => {
     setShowReport(false); // Show SelectToken when Back is clicked
@@ -60,17 +74,30 @@ const App = () => {
               exit={{ opacity: 0, rotateY: -180 }}
               transition={{ duration: 0.6 }}
             >
-              {/* Pass setSelectedToken, setTokenAddress, and setChainId */}
-              <SelectToken
-                onCheckClick={handleCheckClick}
-                setSelectedToken={setSelectedToken}
-                setTokenAddress={setTokenAddress}
-                setChainId={setChainId} // Pass the setChainId handler
-                empty={empty}
-                setempty={setEmpty}
-                buttonclick={buttonclick}
-                setButtonclick={setButtonclick}
-              />
+              {/* Conditionally render SelectToken or SelectTokenMobile */}
+              {isMobile ? (
+                <SelectTokenMobile
+                  onCheckClick={handleCheckClick}
+                  setSelectedToken={setSelectedToken}
+                  setTokenAddress={setTokenAddress}
+                  setChainId={setChainId}
+                  empty={empty}
+                  setEmpty={setEmpty}
+                  buttonclick={buttonclick}
+                  setButtonclick={setButtonclick}
+                />
+              ) : (
+                <SelectToken
+                  onCheckClick={handleCheckClick}
+                  setSelectedToken={setSelectedToken}
+                  setTokenAddress={setTokenAddress}
+                  setChainId={setChainId}
+                  empty={empty}
+                  setEmpty={setEmpty}
+                  buttonclick={buttonclick}
+                  setButtonclick={setButtonclick}
+                />
+              )}
             </motion.div>
           ) : selectedToken === 'SOL' ? (
             <motion.div
@@ -85,7 +112,7 @@ const App = () => {
                 onBackClick={handleBackClick}
                 selectedToken={selectedToken}
                 tokenAddress={tokenAddress}
-                chainId={chainId} // Pass chainId to the report
+                chainId={chainId}
               />
             </motion.div>
           ) : (
@@ -101,7 +128,7 @@ const App = () => {
                 onBackClick={handleBackClick}
                 selectedToken={selectedToken}
                 tokenAddress={tokenAddress}
-                chainId={chainId} // Pass chainId to the report
+                chainId={chainId}
               />
             </motion.div>
           )}
