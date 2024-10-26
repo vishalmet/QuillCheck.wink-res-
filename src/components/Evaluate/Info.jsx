@@ -86,7 +86,7 @@ const Info = ({
                         <p className='font-semibold text-[10px] sm:text-base'>{buyTax}%</p>
                     </div>
                 </div>
-                <div className="border-l-2 border-white/10 mx-10 self-stretch"></div>
+                <div className="border-l-2 border-white/10 mx-2 sm:mx-10 self-stretch"></div>
                 <div>
                     <p>Sell Tax</p>
                     <div className="flex justify-center gap-1 items-center">
@@ -94,7 +94,7 @@ const Info = ({
                         <p className='font-semibold text-[10px] sm:text-base'>{sellTax}%</p>
                     </div>
                 </div>
-                <div className="border-l-2 border-white/10 mx-10 self-stretch"></div>
+                <div className="border-l-2 border-white/10 mx-2 sm:mx-10 self-stretch"></div>
                 <div>
                     <p>Transfer Tax</p>
                     <div className="flex justify-center gap-1 items-center">
