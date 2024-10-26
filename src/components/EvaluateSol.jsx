@@ -181,7 +181,7 @@ const EvaluateSol = ({ onBackClick, tokenAddress, selectedToken }) => {
                                 <Skeleton width={150} />
                             ) : (
                                 (
-                                    <p className="overflow-scroll lg:overflow-visible scrollbar-hide w-32 truncate sm:w-full">
+                                    <p className="overflow-scroll text-xs sm:text-base lg:overflow-visible scrollbar-hide w-32 truncate sm:w-full">
                                         {" "}
                                         {tokenAddress}{" "}
                                     </p>
