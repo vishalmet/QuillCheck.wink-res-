@@ -13,29 +13,30 @@ const ScoreAndAge = ({ totalScore, tokenAge }) => {
   };
 
   return (
-    <div className='flex gap-4'>
-      <div className="text-sm">
+    <div className="flex gap-4">
+      <div className="text-xs sm:text-sm">
         <p>Overall Score: </p>
         <p
-          className="h-12 w-[110px] rounded-[4px] text-2xl font-semibold flex justify-center items-center"
+          className="sm:h-12 sm:w-[110px] h-8 rounded-[4px] text-lg sm:text-2xl font-semibold flex justify-center items-center"
           style={{ backgroundColor: getBackgroundColor(totalScore) }} // Set background color dynamically
         >
           <span className="flex items-baseline">
-            <span className="text-2xl font-semibold">
-              {Math.floor(Number(totalScore) || 0)}{/* Integer part */}
+            <span className=" text-lg sm:text-2xl font-semibold">
+              {Math.floor(Number(totalScore) || 0)}
+              {/* Integer part */}
             </span>
-            <span className="text-lg font-medium">
-              .{(Number(totalScore) || 0).toFixed(2).split('.')[1]}{/* Decimal part */}
+            <span className="text-sm sm:text-lg font-medium">
+              .{(Number(totalScore) || 0).toFixed(2).split(".")[1]}
+              {/* Decimal part */}
             </span>
-            <span className="text-lg font-medium">%</span> {/* Percent symbol */}
+            <span className="text-sm sm:text-lg font-medium">%</span>{" "}
+            {/* Percent symbol */}
           </span>
         </p>
-
-
       </div>
-      <div className="text-sm">
+      <div className="text-xs sm:text-sm">
         <p>Token Age: </p>
-        <p className='h-12 w-[110px] bg-[#FFFFFF]/10 rounded-[4px] flex justify-center text-2xl font-medium items-center'>
+        <p className="sm:h-12 h-8 sm:w-[110px] bg-[#FFFFFF]/10 rounded-[4px] flex justify-center text-2xl font-medium items-center">
           {tokenAge}
         </p>
       </div>

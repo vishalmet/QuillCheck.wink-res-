@@ -36,37 +36,49 @@ const Status = ({
     pairsRisk 
 }) => {
   return (
-    <div className='space-y-2'>
-        <div className="text-sm">
-            <p>Holders</p>
-            <p className='text-lg font-bold flex items-center gap-1'>
-                <img className='h-4' src={getRiskIcon(holdersCountRisk)} alt="" />
-                {holdersCount}
-            </p>
-        </div>
-        <div className="text-sm">
-            <p>Current Liquidity</p>
-            <p className='text-lg font-bold flex items-center gap-1'>
-                <img className='h-4' src={getRiskIcon(currentLiquidityRisk)} alt="" />
-                ${currentLiquidity}
-            </p>
-        </div>
-        <div className="text-sm">
-            <p>Locked Liquidity</p>
-            <p className='text-lg font-bold flex items-center gap-1'>
-                <img className='h-4' src={getRiskIcon(lockedLiquidityRisk)} alt="" />
-                ${lockedLiquidity}
-            </p>
-        </div>
-        <div className="text-sm">
-            <p>Trading Pairs</p>
-            <p className='text-lg font-bold flex items-center gap-1'>
-                <img className='h-4' src={getRiskIcon(pairsRisk)} alt="" />
-                {pairs}
-            </p>
-        </div>
+    <div className="space-y-1 sm:space-y-2">
+      <div className="text-xs sm:text-sm">
+        <p>Holders</p>
+        <p className="text-[10px] sm:text-lg font-bold flex items-center gap-1">
+          <img
+            className="h-3 sm:h-4"
+            src={getRiskIcon(holdersCountRisk)}
+            alt=""
+          />
+          {holdersCount}
+        </p>
+      </div>
+      <div className="text-xs sm:text-sm">
+        <p>Current Liquidity</p>
+        <p className="text-[10px] sm:text-lg font-bold flex items-center gap-1">
+          <img
+            className="h-3 sm:h-4"
+            src={getRiskIcon(currentLiquidityRisk)}
+            alt=""
+          />
+          ${currentLiquidity}
+        </p>
+      </div>
+      <div className="text-xs sm:text-sm">
+        <p>Locked Liquidity</p>
+        <p className="text-[10px] sm:text-lg font-bold flex items-center gap-1">
+          <img
+            className="h-3 sm:h-4"
+            src={getRiskIcon(lockedLiquidityRisk)}
+            alt=""
+          />
+          ${lockedLiquidity}
+        </p>
+      </div>
+      <div className="text-xs sm:text-sm">
+        <p>Trading Pairs</p>
+        <p className="text-[10px] sm:text-lg font-bold flex items-center gap-1">
+          <img className="h-3 sm:h-4" src={getRiskIcon(pairsRisk)} alt="" />
+          {pairs}
+        </p>
+      </div>
     </div>
-  )
+  );
 }
 
 export default Status;
