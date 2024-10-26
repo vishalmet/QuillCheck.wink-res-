@@ -3,7 +3,7 @@ import Assets from '../Assets';
 
 const Report = ({ mintingAuth, freezingAuth, metadataStatus, transferFeeStatus }) => {
   return (
-    <div className="space-y-1 sm:space-y-2 text-xs sm:text-sm">
+    <div className="space-y-1 sm:space-y-2 text-[10px] sm:text-sm">
       <p className="flex items-center gap-2">
         <img
           className="h-2.5 sm:h-4"
