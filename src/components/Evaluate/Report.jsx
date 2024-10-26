@@ -38,4 +38,4 @@ const Report = ({ critical, risky, medium, neutral }) => {
     );
 };
 
-export default Report;
+export default Report; 
